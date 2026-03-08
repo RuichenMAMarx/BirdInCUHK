@@ -1,33 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>鸟类详情</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1 id="bird-name">鸟类名称</h1>
-    <nav>
-      <a href="index.html">主页</a>
-      <a href="birds.html">鸟类列表</a>
-    </nav>
-  </header>
+  <main class="container" style="padding-top: 24px;">
+    <a class="back-link" href="index.html">← 返回鸟类列表</a>
 
-  <main>
-    <section class="bird-detail">
-      <img id="bird-img" src="img/placeholder1.jpg" alt="鸟类图片">
-      <p id="bird-description">这里是鸟类介绍。</p>
-      <audio id="bird-sound" controls>
-        <source src="audio/placeholder.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+    <section id="bird-detail" class="detail-card">
+      <img id="bird-image" src="" alt="鸟类图片">
+
+      <div class="detail-info">
+        <h1 id="bird-cn-name"></h1>
+        <p id="bird-en-name" class="en-name"></p>
+        <p id="bird-description"></p>
+
+        <div id="bird-audio-wrap" hidden>
+          <h3>鸟鸣音频</h3>
+          <audio id="bird-audio" controls></audio>
+        </div>
+      </div>
     </section>
   </main>
-
-  <footer>
-    <p>© 2026 鸟类观察项目</p>
-  </footer>
 
   <script src="js/script.js"></script>
 </body>
