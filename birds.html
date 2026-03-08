@@ -1,38 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>鸟类列表</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>校园鸟类列表</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>鸟类列表</h1>
-    <nav>
-      <a href="index.html">主页</a>
-      <a href="birds.html">鸟类列表</a>
-    </nav>
+  <header class="page-header">
+    <h1>校园鸟类列表</h1>
+    <p>鼠标悬停显示中英文名，点击进入详细页</p>
   </header>
 
-  <main>
-    <ul class="bird-list">
-      <li>
-        <a href="bird-detail.html?id=1">
-          <img src="img/placeholder1.jpg" alt="鸟1">
-          <span>示例鸟种 1</span>
-        </a>
-      </li>
-      <li>
-        <a href="bird-detail.html?id=2">
-          <img src="img/placeholder2.jpg" alt="鸟2">
-          <span>示例鸟种 2</span>
-        </a>
-      </li>
-    </ul>
+  <main class="container">
+    <section id="bird-grid" class="bird-grid"></section>
   </main>
 
-  <footer>
-    <p>© 2026 鸟类观察项目</p>
-  </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
