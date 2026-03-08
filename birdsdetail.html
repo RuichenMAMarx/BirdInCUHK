@@ -1,29 +1,27 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>鸟类详情</title>
+  <title>鳥類詳情</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="container" style="padding-top: 24px;">
-    <a class="back-link" href="index.html">← 返回鸟类列表</a>
+  <header class="top-strip">THE CHINESE UNIVERSITY OF HONG KONG</header>
 
-    <section id="bird-detail" class="detail-card">
-      <img id="bird-image" src="" alt="鸟类图片">
+  <section class="hero" aria-label="鳥類詳情封面">
+    <div class="hero-content">
+      <p class="hero-subtitle">TREES AND BIRDS AT CUHK</p>
+      <h1 id="detail-hero-title">鳥類詳情</h1>
+    </div>
+  </section>
 
-      <div class="detail-info">
-        <h1 id="bird-cn-name"></h1>
-        <p id="bird-en-name" class="en-name"></p>
-        <p id="bird-description"></p>
+  <main class="page-shell">
+    <div class="back-wrap">
+      <a class="back-link" href="index.html">← 返回鳥類列表</a>
+    </div>
 
-        <div id="bird-audio-wrap" hidden>
-          <h3>鸟鸣音频</h3>
-          <audio id="bird-audio" controls></audio>
-        </div>
-      </div>
-    </section>
+    <section id="bird-detail" class="detail-layout panel" aria-live="polite"></section>
   </main>
 
   <script src="js/script.js"></script>
