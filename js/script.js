@@ -2,9 +2,9 @@
   {
     id: 1,
     cnName: "夜鷺",
-    enName: "Black-crowned Night Heron",
+    enName: "Black-crowned night heron",
     scientificName: "Nycticorax nycticorax",
-    image: "bird01.jpg",
+    image: "img/bird01.jpg",
     habits: ["晝伏夜出的夜行性鳥類", "在水邊覓食"],
     locations: ["泥灘濕地", "漁塘", "人工湖", "荷花池", "水流緩慢的河溪"],
     features: [
@@ -31,9 +31,9 @@
   {
     id: 2,
     cnName: "黑領椋鳥",
-    enName: "Black-collared Starling",
+    enName: "Black collared Starling",
     scientificName: "Sturnus nigricollis",
-    image: "bird02.jpg",
+    image: "img/bird02.jpg",
     habits: [
       "於樹木高處築大而顯眼的巢",
       "常以小群活動",

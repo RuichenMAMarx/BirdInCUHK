@@ -25,15 +25,16 @@ a {
 }
 
 .top-strip {
-  height: 46px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f2f2ee;
-  border-bottom: 1px solid #e5e5de;
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  color: #4b5b5c;
+  background: linear-gradient(90deg, #f2f2ee, #f7f7f4);
+  border-bottom: 1px solid #dde3dd;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: #3f4d4e;
+  font-weight: 600;
 }
 
 .hero {
@@ -44,7 +45,7 @@ a {
   justify-content: center;
   text-align: center;
   color: #fff;
-  background-image: url("../bird_cover.jpg");
+  background-image: url("../img/bird_cover.jpg");
   background-size: cover;
   background-position: center 40%;
 }
