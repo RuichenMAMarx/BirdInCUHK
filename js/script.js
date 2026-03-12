@@ -24,6 +24,7 @@
     ],
     call: {
       text: "低沉、重複",
+      file: "audio/night-heron.mp3",
       link: "https://macaulaylibrary.org/asset/225814",
     },
     sources: [{ label: "未圓湖生態遊（Carrd）", link: "https://cuhkbiodiversitytour.carrd.co/" }],
@@ -56,6 +57,7 @@
     ],
     call: {
       text: "鳴聲如響亮的笛聲",
+      file: "audio/starling.wav",
       link: "https://cms.hkbws.org.hk/cms/join-us-tw/bird-sing/soundclip12-black-collared-starling",
     },
     sources: [
@@ -80,6 +82,7 @@
     facts: [{ text: "模仿其他鳥類鳴叫，最常聽到的鳴聲是清晨時的口哨聲" }],
     call: {
       text: "聲音悅耳",
+      file: "audio/magpie-robin.mp3",
       link: "https://macaulaylibrary.org/asset/652231783",
     },
     sources: [],
@@ -109,6 +112,7 @@
     ],
     call: {
       text: "叫聲錄音",
+      file: "audio/tree-sparrow.ogg",
       link: "https://upload.wikimedia.org/wikipedia/commons/8/83/Passer_montanus.ogg",
     },
     sources: [{ label: "叫聲連結（香港觀鳥會）", link: "https://www.hkbws.org.hk/web/chi/birdcall/Tsparrow.wav" }],
@@ -141,6 +145,7 @@
     ],
     call: {
       text: "叫聲低沉，重音靠後",
+      file: "audio/spotted-dove.mp3",
       link: "https://macaulaylibrary.org/asset/117253561",
     },
     sources: [],
@@ -168,6 +173,7 @@
     facts: [{ text: "果實中的種子會隨糞便排出, 種子的傳播距離有時可超過1公里" }],
     call: {
       text: "叫聲連結",
+      file: "audio/red-whiskered-bulbul.mp3",
       link: "https://avifauna.hkbws.org.hk/species/0290/036000",
     },
     sources: [
@@ -226,6 +232,7 @@
     facts: [{ text: "因為每次都是7-10隻成群結隊地出現, 所以被稱為七姊妹" }],
     call: {
       text: "叫聲連結",
+      file: "audio/masked-laughing-thrush.wav",
       link: "https://www.hkbws.org.hk/web/chi/birdcall/Bflthru1.wav",
     },
     sources: [{ label: "延伸資料（CUHK）", link: "https://www.srsdo.cuhk.edu.hk/en-gb/trees-and-birds-at-cuhk/birds/masked-laughing-thrush" }],
@@ -250,6 +257,7 @@
     facts: [{ text: "與台灣藍鵲非常相似 (小挑戰: ", link: "https://www.hokoon.edu.hk/weeklysp/1705_4.html#gsc.tab=0" }],
     call: {
       text: "叫聲連結",
+      file: "audio/red-billed-blue-magpie.mp3",
       link: "https://avifauna.hkbws.org.hk/species/0260/033400",
     },
     sources: [],
@@ -273,6 +281,7 @@
     facts: [],
     call: {
       text: "叫聲連結",
+      file: "audio/cinereous-tit.mp3",
       link: "https://cms.hkbws.org.hk/cms/join-us-tw/bird-sing/soundclip7-cinereoustit",
     },
     sources: [{ label: "延伸資料（CUHK）", link: "https://www.srsdo.cuhk.edu.hk/en-gb/trees-and-birds-at-cuhk/birds/cinereous-tit" }],
@@ -322,6 +331,19 @@ function sourcesMarkup(sources) {
         `<li><a href="${source.link}" target="_blank" rel="noopener">${source.label}</a></li>`
     )
     .join("")}</ul>`;
+}
+
+function callMarkup(call) {
+  const player = call.file
+    ? `<audio class="bird-audio" controls preload="none" src="${call.file}"></audio>`
+    : "";
+  const linkText = call.file ? "原始來源連結" : "前往叫聲連結";
+
+  return `
+    <p>${call.text}</p>
+    ${player}
+    <p><a href="${call.link}" target="_blank" rel="noopener">${linkText}</a></p>
+  `;
 }
 
 function renderBirdDetail() {
@@ -383,8 +405,7 @@ function renderBirdDetail() {
 
       <section class="detail-block">
         <h3>叫聲</h3>
-        <p>${bird.call.text}</p>
-        <p><a href="${bird.call.link}" target="_blank" rel="noopener">前往叫聲連結</a></p>
+        ${callMarkup(bird.call)}
       </section>
 
       <section class="detail-block">
